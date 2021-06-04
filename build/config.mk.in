@@ -47,7 +47,6 @@ includedir                     := @includedir@
 # DESTDIR so that advanced users may install to a temporary location.
 INSTALL_LIBDIR                 := $(DESTDIR)$(libdir)
 INSTALL_INCDIR                 := $(DESTDIR)$(includedir)
-INSTALL_SHAREDIR               := $(DESTDIR)$(sharedir)
 
 # The directory path to the top level of the source distribution. When
 # building in-tree, this path is ".". When building out-of-tree, this path
@@ -56,7 +55,6 @@ DIST_PATH                      := @dist_path@
 
 #$(info INSTALL_LIBDIR = $(INSTALL_LIBDIR))
 #$(info INSTALL_INCDIR = $(INSTALL_INCDIR))
-#$(info INSTALL_SHAREDIR = $(INSTALL_SHAREDIR))
 #$(error .)
 
 # Variables corresponding to other configure-time options.

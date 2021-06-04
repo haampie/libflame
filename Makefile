@@ -214,7 +214,7 @@ MK_LIBS_SYML              := $(strip $(MK_LIBS_SYML))
 # Set the path to the subdirectory of the include installation directory.
 MK_INCL_DIR_INST          := $(INSTALL_INCDIR)
 
-PC_SHARE_DIR_INST         := $(INSTALL_SHAREDIR)/pkgconfig
+PC_DIR_INST               := $(INSTALL_LIBDIR)/pkgconfig
 PC_IN_FILE                := libflame.pc.in
 PC_OUT_FILE               := libflame.pc
 
@@ -415,7 +415,7 @@ all: libs
 
 libs: libflame
 
-install: libs install-libs install-lib-symlinks install-headers $(PC_SHARE_DIR_INST)
+install: libs install-libs install-lib-symlinks install-headers $(PC_DIR_INST)
 
 uninstall: uninstall-libs uninstall-lib-symlinks uninstall-headers
 
@@ -709,7 +709,7 @@ else
 	@$(MV) $(@F) $(INSTALL_LIBDIR)/
 endif
 
-$(PC_SHARE_DIR_INST): $(PC_IN_FILE)
+$(PC_DIR_INST): $(PC_IN_FILE)
 	$(MKDIR) $(@)
 ifeq ($(ENABLE_VERBOSE),no)
 	@echo "Installing $(PC_OUT_FILE) into $(@)/"
