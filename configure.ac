@@ -51,7 +51,7 @@ AC_CONFIG_AUX_DIR([build/ac-utils])
 
 dnl Specify the directory containing additional autoconf macros.
 dnl (Not needed for now since we invoke aclocal manually with -I argument.)
-dnl AC_CONFIG_MACRO_DIR([build/ac-macros])
+AC_CONFIG_MACRO_DIR([build/ac-macros])
 
 dnl Specify the name of the global config header.
 AC_CONFIG_HEADERS([build/FLA_config.h])
