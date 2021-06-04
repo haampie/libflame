@@ -6,6 +6,6 @@ includedir=@includedir@
 Name: libflame
 Description: A portable library for dense matrix computations, providing much of the functionality present in LAPACK
 Version: @PACKAGE_VERSION@
-Libs: -L${libdir} @LDFLAGS@
+Libs: -L${libdir} -llibflame
 Libs.private: @LDFLAGS@
 Cflags: -I${includedir}/libflame
